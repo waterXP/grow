@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Comments from '../../components/Comments'
+import Comments from '../../components/Comments';
 
 import { getComments } from '../../actions/CommentsAction';
 

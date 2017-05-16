@@ -1,14 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import './Abilities.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Abilities.css';
 
-import AbilityCanvas from '../AbilityCanvas'
-import AbilityList from '../AbilityList'
+import AbilityCanvasContainer from '../../containers/AbilityCanvasContainer';
+import AbilityListContainer from '../../containers/AbilityListContainer';
+import AbilityNavContainer from '../../containers/AbilityNavContainer';
 
 const Abilities = (props) => {
-  props = props.viewType || {
-    viewType: 'list'
-  }
   const abilities = [
     {
       id: 1,
@@ -39,10 +37,11 @@ const Abilities = (props) => {
   ]
   return (
     <div className='bordered'>
+      <AbilityNavContainer />      
       {
         props.viewType === 'canvas' ?
-          <AbilityCanvas abilities={abilities} /> :
-          <AbilityList abilities={abilities} />
+          <AbilityCanvasContainer abilities={abilities} /> :
+          <AbilityListContainer abilities={abilities} />
       }
     </div>
   )

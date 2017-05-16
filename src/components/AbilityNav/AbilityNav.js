@@ -4,17 +4,18 @@ import './AbilityNav.css'
 
 const AbilityNav = (props) => (
   <div className='ability-nav pull-right'>
-    <button className={props.active === 'canvas' ? 'btn btn-xs btn-success' : 'btn btn-xs btn-default'}>
+    <button className={props.viewType === 'canvas' ? 'btn btn-xs btn-success' : 'btn btn-xs btn-default'} onClick={props.changeType.bind(null, 'canvas')}>
       <span className="glyphicon glyphicon-cd" aria-hidden="true"></span>
     </button>
-    <button className={props.active === 'list' ? 'btn btn-xs btn-success' : 'btn btn-xs btn-default'}>
+    <button className={props.viewType === 'list' ? 'btn btn-xs btn-success' : 'btn btn-xs btn-default'} onClick={props.changeType.bind(null, 'list')}>
       <span className="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
     </button>
   </div>
 )
 
 AbilityNav.propTypes = {
-  active: PropTypes.string.isRequired
+  viewType: PropTypes.string.isRequired,
+  changeType: PropTypes.func.isRequired
 }
 
 export default AbilityNav

@@ -1,13 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import './AbilityList.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import './AbilityList.css';
 
-import Ability from '../Ability'
-import AbilityNav from '../AbilityNav'
+import Ability from '../Ability';
 
 const AbilityList = (props) => (
     <div className='ability-list'>
-      <AbilityNav active='list' />
       <ul>
         {props.abilities.map((ability) =>
           <Ability
@@ -17,7 +15,7 @@ const AbilityList = (props) => (
         )}
       </ul>
     </div>
-)
+);
 
 AbilityList.propTypes = {
   abilities: PropTypes.arrayOf(PropTypes.shape({
@@ -28,6 +26,6 @@ AbilityList.propTypes = {
     categoryId: PropTypes.number,
     categoryName: PropTypes.string
   }).isRequired).isRequired
-}
+};
 
-export default AbilityList
+export default AbilityList;

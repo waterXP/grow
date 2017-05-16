@@ -1,15 +1,15 @@
 import React from 'react';
 import './app.css';
 
-import UserInfo from '../../containers/UserInfoContainer';
-import Abilities from '../Abilities';
-import Comments from '../../containers/CommentsContainer';
+import UserInfoContainer from '../../containers/UserInfoContainer';
+import AbilitiesContainer from '../../containers/AbilitiesContainer';
+import CommentsContainer from '../../containers/CommentsContainer';
 
 const App = () => (
   <div className='app'>
-    <UserInfo />
-    <Abilities />
-    <Comments />
+    <UserInfoContainer />
+    <AbilitiesContainer />
+    <CommentsContainer />
   </div>
 );
 

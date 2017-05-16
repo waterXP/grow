@@ -21,7 +21,7 @@ const ACTION_HANDLES = {
   }
 };
 
-const initialState = {datas: []};
+const initialState = { datas: [] };
 
 export default function commentsReducer (state = initialState, action) {
   const handler = ACTION_HANDLES[action.type];
