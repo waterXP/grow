@@ -1,9 +1,9 @@
-import React from 'react'
-import './app.css'
+import React from 'react';
+import './app.css';
 
-import UserInfo from '../../containers/UserInfoContainer'
-import Abilities from '../Abilities'
-import Comments from '../Comments'
+import UserInfo from '../../containers/UserInfoContainer';
+import Abilities from '../Abilities';
+import Comments from '../../containers/CommentsContainer';
 
 const App = () => (
   <div className='app'>
@@ -11,6 +11,6 @@ const App = () => (
     <Abilities />
     <Comments />
   </div>
-)
+);
 
-export default App
+export default App;

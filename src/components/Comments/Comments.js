@@ -26,6 +26,7 @@ class Comments extends Component {
 }
 
 Comments.propTypes = {
+  getComments: PropTypes.func.isRequired,
   comments: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     content: PropTypes.string.isRequired,

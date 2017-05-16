@@ -4,7 +4,7 @@ import Comments from '../../components/Comments'
 import { getComments } from '../../actions/CommentsAction';
 
 const mapStateToProps = (state) => ({
-  comments: state.comments
+  comments: state.comments.datas
 });
 
 const mapDispatchToProps = {
@@ -14,6 +14,6 @@ const mapDispatchToProps = {
 const CommentsContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Commetns);
+)(Comments);
 
 export default CommentsContainer;
