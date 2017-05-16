@@ -1,0 +1,7 @@
+.ability-canvas {
+  text-align: center;
+}
+
+.ability-canvas canvas {
+  clear: both;
+}

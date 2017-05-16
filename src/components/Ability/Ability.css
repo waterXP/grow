@@ -1,0 +1,19 @@
+.ability {
+  padding: 0.5rem;
+  border: 1px solid #d0dfdf;
+  border-radius: 4px;
+  background-color: #f0ffff;
+}
+
+.ability p {
+  display: inline-block;
+  width: calc(100% - 10rem);
+}
+
+.ability span {
+  font-size: 12px;
+}
+
+.ability + .ability {
+  margin-top: 0.5rem;
+}

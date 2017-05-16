@@ -1,0 +1,22 @@
+.user-info .icon {
+  width: 8rem;
+  height: 8rem ;
+  vertical-align: top;
+  border-radius: 50%;
+}
+
+.user-info .base {
+  width: calc(100% - 10rem);
+  display: inline-block;
+  padding-left: 2rem;
+}
+
+.user-info .base label:nth-child(odd) {
+  width: 40%;
+  padding: 0 5px;
+}
+
+.user-info .base label:nth-child(even) {
+  width: 60%;
+  padding: 0 5px;
+}
