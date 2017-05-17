@@ -12,11 +12,11 @@
 }
 
 .user-info .base label:nth-child(odd) {
-  width: 40%;
-  padding: 0 5px;
+  width: 6rem;
+  padding: 0 0.5rem;
 }
 
 .user-info .base label:nth-child(even) {
-  width: 60%;
-  padding: 0 5px;
+  width: calc(100% - 6rem);
+  padding: 0 0.5rem;
 }

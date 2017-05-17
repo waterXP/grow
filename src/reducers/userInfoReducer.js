@@ -1,4 +1,5 @@
-import { GET_USER_INFO } from '../actions/UserInfoAction';
+import { GET_USER_INFO, TEST_FETCH } from '../actions/UserInfoAction';
+import { FETCH_FAIL, fetchFail } from '../actions/base';
 
 const ACTION_HANDLERS = {
   [GET_USER_INFO]: (state, action) => {
@@ -12,7 +13,12 @@ const ACTION_HANDLERS = {
     }
     
     return state;
-  }
+  },
+  [TEST_FETCH]: (state, action) => {
+    console.log(action.data);
+    return state;
+  },
+  [FETCH_FAIL]: fetchFail
 };
 
 const initialState = {
