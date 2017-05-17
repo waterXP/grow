@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import AbilityNav from '../../components/AbilityNav';
 
-import { changeType } from '../../actions/AbilitiesAction'
+import { changeType } from '../../actions/AbilityAction'
 
 const mapStateToProps = (state) => ({
-  viewType: state.abilities.viewType
+  viewType: state.ability.viewType
 });
 
 const mapDispatchToProps = {

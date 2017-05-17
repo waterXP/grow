@@ -1,12 +1,12 @@
-import { GET_COMMENTS } from '../actions/CommentsAction';
+import { GET_COMMENTS } from '../actions/CommentAction';
 
 const ACTION_HANDLES = {
   [GET_COMMENTS]: (state, action) => {
-    if (!state.comments) {
+    if (!state.comment) {
       return Object.assign({}, state, {
-        datas :[
+        list :[
           {
-            id: 2,
+            cId: 2,
             content: 'test',
             updateTime: 1494834642837,
             authorId: 337,
@@ -21,7 +21,7 @@ const ACTION_HANDLES = {
   }
 };
 
-const initialState = { datas: [] };
+const initialState = { list: [] };
 
 export default function commentsReducer (state = initialState, action) {
   const handler = ACTION_HANDLES[action.type];

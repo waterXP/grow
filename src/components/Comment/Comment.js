@@ -19,7 +19,7 @@ const Comment = (props) => {
 }
 
 Comment.propTypes = {
-  id: PropTypes.number.isRequired,
+  cId: PropTypes.number.isRequired,
   content: PropTypes.string.isRequired,
   updateTime: PropTypes.number.isRequired,
   authorId: PropTypes.number.isRequired,

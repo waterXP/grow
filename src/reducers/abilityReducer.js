@@ -1,4 +1,4 @@
-import { CHANGE_TYPE } from '../actions/AbilitiesAction';
+import { CHANGE_TYPE } from '../actions/AbilityAction';
 
 const ACTION_HANDLES = {
   [CHANGE_TYPE]: (state, action) => {

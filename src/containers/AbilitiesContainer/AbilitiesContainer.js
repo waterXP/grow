@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import Abilities from '../../components/Abilities';
 
 const mapStateToProps = (state) => ({
-  viewType: state.abilities.viewType
+  viewType: state.ability.viewType
 });
 
 const AbilitiesContainer = connect(

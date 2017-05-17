@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import './UserInfo.css';
 
 class UserInfo extends Component {
-  componentDidMount () {
-    this.props.getUserInfo();
+  static propTypes = {
+    iconUrl: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number,
+    job: PropTypes.string
   }
 
   render () {
@@ -24,13 +27,5 @@ class UserInfo extends Component {
     );
   }
 }
-
-UserInfo.propTypes = {
-  getUserInfo: PropTypes.func.isRequired,
-  iconUrl: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  age: PropTypes.number,
-  job: PropTypes.string
-};
 
 export default UserInfo;

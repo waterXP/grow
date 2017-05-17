@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
-import userInfoReducer from './userInfoReducer';
-import abilitiesReducer from './abilitiesReducer';
-import commentsReducer from './commentsReducer';
+import userReducer from './userReducer';
+import abilityReducer from './abilityReducer';
+import commentReducer from './commentReducer';
 
 
 export default combineReducers({
-  user: userInfoReducer,
-  abilities: abilitiesReducer,
-  comments: commentsReducer
+  user: userReducer,
+  ability: abilityReducer,
+  comment: commentReducer
 });

@@ -21,7 +21,7 @@ AbilityList.propTypes = {
   abilities: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     type: PropTypes.number.isRequired,
-    lastestUpdateTime: PropTypes.number.isRequired,
+    updateTime: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     categoryId: PropTypes.number,
     categoryName: PropTypes.string

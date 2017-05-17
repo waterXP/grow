@@ -7,7 +7,7 @@ const Ability = (props) => (
   <li className='ability'>
     <p>{props.title}</p>
     <span>
-      {moment(props.lastestUpdateTime).format('YYYY-MM-DD HH:mm:ss')}
+      {moment(props.updateTime).format('YYYY-MM-DD HH:mm:ss')}
     </span>
   </li>  
 )
@@ -15,7 +15,7 @@ const Ability = (props) => (
 Ability.propTypes = {
   id: PropTypes.number.isRequired,
   type: PropTypes.number.isRequired,
-  lastestUpdateTime: PropTypes.number.isRequired,
+  updateTime: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   categoryId: PropTypes.number,
   categoryName: PropTypes.string

@@ -15,7 +15,7 @@ class Comments extends Component {
         <ul className='comments'>
           {this.props.comments.map((comment) =>
             <Comment
-              key={comment.id}
+              key={comment.cId}
               {...comment}
             />
           )}
@@ -28,7 +28,7 @@ class Comments extends Component {
 Comments.propTypes = {
   getComments: PropTypes.func.isRequired,
   comments: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    cId: PropTypes.number.isRequired,
     content: PropTypes.string.isRequired,
     updateTime: PropTypes.number.isRequired,
     authorId: PropTypes.number.isRequired,

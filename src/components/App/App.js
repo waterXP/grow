@@ -8,7 +8,7 @@ import CommentsContainer from '../../containers/CommentsContainer';
 
 class App extends Component {
   componentDidMount () {
-    this.props.testFetch();
+    this.props.getUserInfo();
   }
 
   render () {
@@ -23,7 +23,7 @@ class App extends Component {
 }
 
 App.propTypes = {
-  testFetch: PropTypes.func.isRequired
+  getUserInfo: PropTypes.func.isRequired
 }
 
 export default App;

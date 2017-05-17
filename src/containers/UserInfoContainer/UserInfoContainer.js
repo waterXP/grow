@@ -1,8 +1,6 @@
 import { connect } from 'react-redux';
 import UserInfo from '../../components/UserInfo';
 
-import { getUserInfo } from '../../actions/UserInfoAction';
-
 const mapStateToProps = (state) => ({
   iconUrl: state.user.iconUrl,
   name: state.user.name,
@@ -10,13 +8,8 @@ const mapStateToProps = (state) => ({
   job: state.user.job
 });
 
-const mapDispatchToProps = {
-  getUserInfo
-};
-
 const UserInfoContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(UserInfo);
 
 export default UserInfoContainer;

@@ -2,16 +2,13 @@ import { fetchData, FETCH_FAIL } from './base'
 
 export const GET_USER_INFO = 'GET_USER_INFO';
 
-/** remeber delete this */
-export const TEST_FETCH = 'TEST_FETCH';
-
-export function testFetch () {
+export function getUserInfo () {
   return (dispatch, getState) => {
-    fetchData('get /api/test')
+    fetchData('get /api/user/info', { id: 'wutianba@sina.com' })
     .then((data) => {
       return dispatch({
-        type: TEST_FETCH,
-        data: data
+        type: GET_USER_INFO,
+        response: data
       })
     })
     .catch((e) => {
@@ -22,10 +19,3 @@ export function testFetch () {
     })
   }
 }
-/** remeber */
-
-export function getUserInfo () {
-  return {
-    type: GET_USER_INFO
-  };
-};

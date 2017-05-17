@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import Comments from '../../components/Comments';
 
-import { getComments } from '../../actions/CommentsAction';
+import { getComments } from '../../actions/CommentAction';
 
 const mapStateToProps = (state) => ({
-  comments: state.comments.datas
+  comments: state.comment.list
 });
 
 const mapDispatchToProps = {

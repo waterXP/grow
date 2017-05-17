@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 import App from '../../components/App';
 
-import { testFetch } from '../../actions/UserInfoAction';
+import { getUserInfo } from '../../actions/UserAction';
 
 const mapStateToProps = (state) => ({
 
 });
 
 const mapDispatchToProps = {
-  testFetch
+  getUserInfo
 };
 
 const AppContainer= connect(

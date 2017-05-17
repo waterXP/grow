@@ -11,27 +11,27 @@ const Abilities = (props) => {
     {
       id: 1,
       type: 0,
-      lastestUpdateTime: 133333333,
+      updateTime: 133333333,
       title: '测试'
     }, {
       id: 2,
       type: 0,
-      lastestUpdateTime: 133333333,
+      updateTime: 133333333,
       title: '测试2'
     }, {
       id: 3,
       type: 0,
-      lastestUpdateTime: 133333333,
+      updateTime: 133333333,
       title: '测试3'
     }, {
       id: 4,
       type: 0,
-      lastestUpdateTime: 133333333,
+      updateTime: 133333333,
       title: '测试4'
     }, {
       id: 5,
       type: 0,
-      lastestUpdateTime: 133333333,
+      updateTime: 133333333,
       title: '测试5'
     }
   ]
