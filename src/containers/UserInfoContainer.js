@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import UserInfo from '../../components/UserInfo';
+import UserInfo from '../components/UserInfo';
 
 const mapStateToProps = (state) => ({
   iconUrl: state.user.iconUrl,

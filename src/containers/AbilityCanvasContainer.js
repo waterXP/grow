@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import AbilityCanvas from '../../components/AbilityCanvas';
+import AbilityCanvas from '../components/AbilityCanvas';
 
 const mapStateToProps = (state) => ({
 });

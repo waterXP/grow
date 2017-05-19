@@ -7,6 +7,10 @@ import AbilitiesContainer from '../../containers/AbilitiesContainer';
 import CommentsContainer from '../../containers/CommentsContainer';
 
 class App extends Component {
+  static propTypes = {
+    getUserInfo: PropTypes.func.isRequired
+  }
+
   componentDidMount () {
     this.props.getUserInfo();
   }
@@ -20,10 +24,6 @@ class App extends Component {
       </div>
     );
   }
-}
-
-App.propTypes = {
-  getUserInfo: PropTypes.func.isRequired
 }
 
 export default App;

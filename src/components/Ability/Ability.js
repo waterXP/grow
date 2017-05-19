@@ -5,7 +5,7 @@ import './Ability.css'
 
 const Ability = (props) => (
   <li className='ability'>
-    <p>{props.title}</p>
+    <p>{props.name}</p>
     <span>
       {moment(props.updateTime).format('YYYY-MM-DD HH:mm:ss')}
     </span>
@@ -13,12 +13,10 @@ const Ability = (props) => (
 )
 
 Ability.propTypes = {
-  id: PropTypes.number.isRequired,
-  type: PropTypes.number.isRequired,
-  updateTime: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  categoryId: PropTypes.number,
-  categoryName: PropTypes.string
+  ability: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  experience: PropTypes.number.isRequired,
+  updateTime: PropTypes.number.isRequired
 }
 
 export default Ability

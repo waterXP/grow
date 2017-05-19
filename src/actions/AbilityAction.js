@@ -5,4 +5,4 @@ export function changeType (type) {
     type: CHANGE_TYPE,
     newType: type
   }
-}
+};
