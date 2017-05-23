@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import AbilityList from '../components/AbilityList';
 
-import { getUserAbilities } from '../actions/UserAction';
+import { getUserAbilities } from '../actions/AbilityAction';
 
 const mapStateToProps = (state) => ({
-  abilities: state.user.abilities
+  abilities: state.ability.list
 });
 
 const mapDispatchToProps = {

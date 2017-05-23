@@ -11,8 +11,9 @@ class AbilityList extends Component {
       ability: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       experience: PropTypes.number.isRequired,
-      updateTime: PropTypes.number.isRequired
-    }).isRequired).isRequired    
+      updateTime: PropTypes.number.isRequired,
+      factor: PropTypes.number
+    }).isRequired).isRequired
   }
 
   componentDidMount () {
@@ -22,14 +23,24 @@ class AbilityList extends Component {
   render () {
     return (
       <div className='ability-list'>
-        <ul>
-          {this.props.abilities.map((ability) =>
-            <Ability
-              key={ability.ability}
-              {...ability}
-            />
-          )}
-        </ul>
+        <table className='table center'>
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>累计时长</th>
+              <th>评价</th>
+              <th>更新时间</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.props.abilities.map((ability) =>
+              <Ability
+                key={ability.ability}
+                {...ability}
+              />
+            )}
+          </tbody>
+        </table>
       </div>
     )
   }

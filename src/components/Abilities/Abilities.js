@@ -13,7 +13,7 @@ class Abilities extends Component {
 
   render () {
     return (
-      <div className='bordered'>
+      <div className='bordered ability-box'>
         <AbilityNavContainer />      
         {
           this.props.viewType === 'canvas' ?

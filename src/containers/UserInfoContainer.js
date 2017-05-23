@@ -5,7 +5,8 @@ const mapStateToProps = (state) => ({
   iconUrl: state.user.iconUrl,
   name: state.user.name,
   age: state.user.age,
-  job: state.user.job
+  job: state.user.job,
+  updateTime: state.user.updateTime
 });
 
 const UserInfoContainer = connect(

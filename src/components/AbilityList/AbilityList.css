@@ -1,3 +1,7 @@
-.ability-list ul {
+.ability-list table {
   clear: both;
+}
+
+.center, .center th, .center td {
+  text-align: center;
 }

@@ -11,7 +11,9 @@
 }
 
 .ability span {
+  float: right;
   font-size: 12px;
+  line-height: 20px;
 }
 
 .ability + .ability {

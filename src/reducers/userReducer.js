@@ -1,4 +1,4 @@
-import { GET_USER_INFO, GET_USER_ABILITIES } from '../actions/UserAction';
+import { GET_USER_INFO } from '../actions/UserAction';
 import { FETCH_FAIL, fetchFail } from '../actions/base';
 
 const ACTION_HANDLERS = {
@@ -10,18 +10,9 @@ const ACTION_HANDLERS = {
         iconUrl: data.iconUrl,
         name: data.name,
         job: data.job,
-        age: data.age
+        age: data.age,
+        updateTime: data.updateTime
       });
-    }
-    return state;
-  },
-  [GET_USER_ABILITIES]: (state, action) => {
-    const res = action.response;
-    if (res.code === 200) {
-      const data = res.data;
-      return Object.assign({}, state, {
-        abilities: data
-      })
     }
     return state;
   },
@@ -30,8 +21,7 @@ const ACTION_HANDLERS = {
 
 const initialState = {
   iconUrl: '/styles/imgs/unknown.jpg',
-  name: '新用户',
-  abilities: []
+  name: '新用户'
 };
 
 export default function userInfoReducer (state = initialState, action) {
