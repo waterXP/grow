@@ -20,8 +20,7 @@ const ACTION_HANDLERS = {
 };
 
 const initialState = {
-  iconUrl: '/styles/imgs/unknown.jpg',
-  name: '新用户'
+  iconUrl: '/styles/imgs/unknown.jpg'
 };
 
 export default function userInfoReducer (state = initialState, action) {

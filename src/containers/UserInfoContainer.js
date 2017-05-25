@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import UserInfo from '../components/UserInfo';
 
+import { toPage } from '../actions/BaseAction';
+
 const mapStateToProps = (state) => ({
   iconUrl: state.user.iconUrl,
   name: state.user.name,
@@ -9,8 +11,13 @@ const mapStateToProps = (state) => ({
   updateTime: state.user.updateTime
 });
 
+const mapDispatchToProps = {
+  editPoint: toPage.bind(null, 'custom')
+};
+
 const UserInfoContainer = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(UserInfo);
 
 export default UserInfoContainer;

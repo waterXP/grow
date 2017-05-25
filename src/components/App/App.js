@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './app.css';
+import './App.css';
 
-import UserInfoContainer from '../../containers/UserInfoContainer';
-import AbilitiesContainer from '../../containers/AbilitiesContainer';
-import CommentsContainer from '../../containers/CommentsContainer';
+import MainPage from '../MainPage';
+import CustomPage from '../CustomPage';
 
 class App extends Component {
   static propTypes = {
-    getUserInfo: PropTypes.func.isRequired
+    getUserInfo: PropTypes.func.isRequired,
+    page: PropTypes.string.isRequired
   }
 
   componentDidMount () {
@@ -16,12 +16,19 @@ class App extends Component {
   }
 
   render () {
+    let route;
+    switch (this.props.page) {
+      case 'main':
+        route = <MainPage />;
+        break;
+      case 'custom':
+        route = <CustomPage />;
+        break;
+      default:
+        route = <MainPage />;
+    }
     return (
-      <div className='app'>
-        <UserInfoContainer />
-        <AbilitiesContainer />
-        <CommentsContainer />
-      </div>
+      <div className='app'>{route}</div>
     );
   }
 }

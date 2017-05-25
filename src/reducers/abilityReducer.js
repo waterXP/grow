@@ -121,4 +121,4 @@ const initialState = {
 export default function abilitiesReducer (state = initialState, action) {
   const handler = ACTION_HANDLES[action.type];
   return handler ? handler(state, action) : state;  
-}
+};

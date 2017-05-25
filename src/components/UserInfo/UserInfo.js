@@ -6,27 +6,33 @@ import './UserInfo.css';
 class UserInfo extends Component {
   static propTypes = {
     iconUrl: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     age: PropTypes.number,
     job: PropTypes.string,
-    updateTime: PropTypes.number
+    updateTime: PropTypes.number,
+    editPoint: PropTypes.func.isRequired
   }
 
   render () {
     let props = this.props;
-    const limitTime = +moment(props.updateTime)
-      .add(1, 'days')
-      .set({hour: 0, minute: 0, second: 0})
-      .format('x');
+    const updated = props.updateTime
+      ? +moment(props.updateTime) 
+        .add(1, 'days')
+        .set({hour: 0, minute: 0, second: 0})
+        .format('x') < +new Date()
+      : '';
     return (
       <div className='user-info bordered'>
-        {limitTime < +new Date()
-          ? <button className='btn btn-xs btn-primary float-btn'>未更新</button>
-          : <button className='btn btn-xs btn-success float-btn'>已更新</button>}
+        {updated && <button
+          className={`btn btn-xs float-btn ${updated ? 'btn-primary' : 'btn-success'}`}
+          onClick={props.editPoint.bind(this)}>
+          {updated ? '未更新' : '已更新'}
+        </button>}
+        
         <img className='icon' src={props.iconUrl} alt={props.name} />
         <div className='base'>
-          <label>姓名：</label>
-          <label>{props.name}</label>
+          {props.name && <label>姓名：</label>}
+          {props.name && <label>{props.name}</label>}
           {props.age && <label>年龄：</label>}
           {props.age && <label>{props.age}</label>}
           {props.job && <label>工作：</label>}

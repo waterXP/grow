@@ -4,7 +4,7 @@ import App from '../components/App';
 import { getUserInfo } from '../actions/UserAction';
 
 const mapStateToProps = (state) => ({
-
+  page: state.base.page
 });
 
 const mapDispatchToProps = {
